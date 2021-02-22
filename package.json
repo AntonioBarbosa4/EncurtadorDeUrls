@@ -4,9 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc --project tsconfig.json && tsc-alias -p tsconfig.json",
     "dev:server": "ts-node-dev -r tsconfig-paths/register  --inspect --transpile-only --ignore-watch node_modules src/shared/infra/http/server.ts",
-    "start": "ts-node-dev src/shared/infra/http/server.ts",
+    "start": "node dist/src/shared/infra/http/server.js",
     "typeorm": "ts-node-dev -r tsconfig-paths/register ./node_modules/typeorm/cli.js",
     "test": "jest"
   },
@@ -38,6 +38,7 @@
     "prettier": "^2.2.1",
     "ts-jest": "^26.5.1",
     "ts-node-dev": "^1.1.1",
+    "tsc-alias": "^1.2.6",
     "tsconfig-paths": "^3.9.0",
     "typescript": "^4.1.5"
   }

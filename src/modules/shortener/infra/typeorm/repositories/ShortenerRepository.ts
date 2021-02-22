@@ -23,6 +23,7 @@ class ShortenerRepository implements IShortenerRepository {
   public async findByURL(url: string): Promise<Shortener | undefined> {
     const findUrl = await this.ormRepository.findOne({
       where: { url },
+      order: { id: 'DESC' },
     });
     return findUrl;
   }

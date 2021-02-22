@@ -3,17 +3,17 @@
     "target": "es5",
     "module": "commonjs",
     "outDir": "./dist",
-    "rootDir": "./src",
+
     "strict": true,
     "strictPropertyInitialization": false,
-    "baseUrl": "./src",
+    "baseUrl": ".",
     "allowJs": true,
     "paths": {
       "@modules/*": [
-        "modules/*"
+        "src/modules/*"
       ],
       "@shared/*": [
-        "shared/*"
+        "src/shared/*"
       ]
     },
     "esModuleInterop": true,
