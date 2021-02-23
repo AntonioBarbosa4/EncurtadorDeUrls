@@ -2,6 +2,8 @@
 
 This api provides everything you need to shorten a url.
 
+The shortened url generated is two hours long, if a url that did not sneeze is submitted, the same shortened url will be returned.
+
 ## 🚀 Technologies
 
 Technologies that I used to develop this api
@@ -13,6 +15,8 @@ Technologies that I used to develop this api
 - [uuid v4](https://github.com/thenativeweb/uuidv4/)
 - [PostgreSQL](https://www.postgresql.org/)
 - [Date-fns](https://date-fns.org/)
+- [Tsyringe](https://github.com/microsoft/tsyringe)
+- [Class-transformer](https://github.com/typestack/class-transformer)
 - [Jest](https://jestjs.io/)
 - [Eslint](https://eslint.org/)
 - [Prettier](https://prettier.io/)
@@ -49,8 +53,8 @@ $ yarn
 $ cp .env.example .env
 
 # Create the instance of postgreSQL using docker
-$ docker run --name shortener-postgres -e POSTGRES_USER=postgres \
-              -e POSTGRES_DB=shortener -e POSTGRES_PASSWORD=docker \
+$ docker run --name shortener-postgres -e POSTGRES_USER=postgres
+              -e POSTGRES_DB=shortener -e POSTGRES_PASSWORD=docker
               -p 5432:5432 -d postgres
 
 # Once the services are running, run the migrations
@@ -92,3 +96,6 @@ Api return is shortener url:
 {"newUrl": "https://shortenedurls.herokuapp.com/17d9481d"}
 ```
 
+## Postman
+
+API documentation: https://documenter.getpostman.com/view/14675598/TWDZHwFt#error-codes
