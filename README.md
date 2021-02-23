@@ -98,4 +98,4 @@ Api return is shortener url:
 
 ## Postman
 
-API documentation: https://documenter.getpostman.com/view/14675598/TWDZHwFt#error-codes
+API documentation: https://documenter.getpostman.com/view/14675598/TWDZHwFt
